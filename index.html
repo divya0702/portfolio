@@ -98,6 +98,31 @@ nav {
 
 .nav-cta:hover { background: var(--blue); }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ─── HERO ─── */
 .hero {
   min-height: 100vh;
@@ -835,8 +860,31 @@ footer {
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
-  .nav-links { display: none; }
-  
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.open { max-height: 320px; }
+
+  .nav-links li { border-top: 1px solid var(--line); }
+
+  .nav-links a {
+    display: block;
+    padding: 18px 24px;
+  }
+
   .hero { grid-template-columns: 1fr; }
   .hero-left { padding: 48px 24px 60px; border-right: none; border-bottom: 1px solid var(--line); }
   .hero-right { padding: 48px 24px; }
@@ -859,13 +907,18 @@ footer {
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Divya Kamila</a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#work">Work</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#about">About</a></li>
   </ul>
   <a href="mailto:divyakamila7@gmail.com" class="nav-cta">Get in touch</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -876,7 +929,7 @@ footer {
       Building systems<br>that <em>ship.</em>
     </h1>
     <p class="hero-desc">
-      Three years delivering production software in <strong>fintech and cloud infrastructure</strong>. I work across the full stack , from React interfaces to Kubernetes clusters , with a current focus on <strong>AI-powered tooling</strong>.
+      Three years delivering production software in <strong>fintech and cloud infrastructure</strong>. I work across the full stack — from React interfaces to Kubernetes clusters — with a current focus on <strong>AI-powered tooling</strong>.
     </p>
     <div class="hero-links">
       <a href="#work" class="hero-link primary">View work</a>
@@ -969,7 +1022,7 @@ footer {
     <div class="section-label">Selected work</div>
     <div class="projects-intro">
       <h2 class="section-heading">Projects that<br><em>solve real</em><br>problems.</h2>
-      <p class="projects-desc">A focused selection across AI, fintech, and infrastructure. Each one built with production quality in mind , not just to demonstrate a skill, but to actually work.</p>
+      <p class="projects-desc">A focused selection across AI, fintech, and infrastructure. Each one built with production quality in mind — not just to demonstrate a skill, but to actually work.</p>
     </div>
   </div>
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 48px;">
@@ -979,7 +1032,7 @@ footer {
         <div class="pt-num">01</div>
         <div class="pt-title">Green Sense</div>
         <div class="pt-tech">Gemini API · RAG · React · Python</div>
-        <div class="pt-desc">An AI sustainability platform that extracts energy and carbon metrics from unstructured utility bill PDFs. Delivers interactive dashboards, an LLM-powered chatbot, and a gamified carbon leaderboard , end-to-end product ownership from problem to deployed interface.</div>
+        <div class="pt-desc">An AI sustainability platform that extracts energy and carbon metrics from unstructured utility bill PDFs. Delivers interactive dashboards, an LLM-powered chatbot, and a gamified carbon leaderboard — end-to-end product ownership from problem to deployed interface.</div>
         <div class="pt-tags">
           <span class="pt-tag">1st Place FinTech</span>
           <span class="pt-tag">Gemini Hack Night</span>
@@ -992,7 +1045,7 @@ footer {
         <div class="pt-num">02</div>
         <div class="pt-title">BookMyEvent</div>
         <div class="pt-tech">AWS EKS · Go · React · Kubernetes · Terraform</div>
-        <div class="pt-desc">A distributed event booking system deployed on AWS EKS with Go-based microservices, concurrency-safe booking logic, auto-scaling infrastructure, and full observability dashboards. Built to handle high traffic without overselling , a reliability-first engineering challenge.</div>
+        <div class="pt-desc">A distributed event booking system deployed on AWS EKS with Go-based microservices, concurrency-safe booking logic, auto-scaling infrastructure, and full observability dashboards. Built to handle high traffic without overselling — a reliability-first engineering challenge.</div>
         <div class="pt-tags">
           <span class="pt-tag">Cloud-native</span>
           <span class="pt-tag">Microservices</span>
@@ -1005,7 +1058,7 @@ footer {
         <div class="pt-num">03</div>
         <div class="pt-title">Phishing Detection</div>
         <div class="pt-tech">charCNN · BERT · PyTorch · NLP</div>
-        <div class="pt-desc">Trained multiple deep learning architectures on 145,000+ emails. The winning model fuses character-level CNNs with contextual BERT embeddings , achieving 99.0% accuracy and 0.994 F1-score. A rigorous study in architecture selection under real-world constraints.</div>
+        <div class="pt-desc">Trained multiple deep learning architectures on 145,000+ emails. The winning model fuses character-level CNNs with contextual BERT embeddings — achieving 99.0% accuracy and 0.994 F1-score. A rigorous study in architecture selection under real-world constraints.</div>
         <div class="pt-tags">
           <span class="pt-tag">Deep learning</span>
           <span class="pt-tag">Security</span>
@@ -1018,7 +1071,7 @@ footer {
         <div class="pt-num">04</div>
         <div class="pt-title">Terp EventSphere</div>
         <div class="pt-tech">React · Node.js · PostgreSQL · NeonDB</div>
-        <div class="pt-desc">A microservices-based campus event platform with modular services for user management, event discovery, registration workflows, and waitlist handling , all connected to a cloud PostgreSQL database and deployed live.</div>
+        <div class="pt-desc">A microservices-based campus event platform with modular services for user management, event discovery, registration workflows, and waitlist handling — all connected to a cloud PostgreSQL database and deployed live.</div>
         <div class="pt-tags">
           <span class="pt-tag">Full stack</span>
           <span class="pt-tag">Microservices</span>
@@ -1031,7 +1084,7 @@ footer {
         <div class="pt-num">05</div>
         <div class="pt-title">OCR Manuscript Pipeline</div>
         <div class="pt-tech">TrOCR · PyTorch · GIS · 3D Visualization · UMD Research</div>
-        <div class="pt-desc">An AI-powered pipeline to digitize 18th-century manuscripts using TrOCR and PyTorch , reducing manual correction effort by 60%. Part of a broader digital humanities platform re-architected with interactive GIS maps, 3D visualizations, and dynamic cross-referencing. Proof that the right engineering can open up entire fields of scholarship.</div>
+        <div class="pt-desc">An AI-powered pipeline to digitize 18th-century manuscripts using TrOCR and PyTorch — reducing manual correction effort by 60%. Part of a broader digital humanities platform re-architected with interactive GIS maps, 3D visualizations, and dynamic cross-referencing. Proof that the right engineering can open up entire fields of scholarship.</div>
         <div class="pt-tags">
           <span class="pt-tag">Research</span>
           <span class="pt-tag">Computer vision</span>
@@ -1060,7 +1113,7 @@ footer {
         <div class="tl-role">Graduate Research Assistant</div>
         <div class="tl-company">University of Maryland, College Park</div>
         <ul class="tl-points">
-          <li>Designed AI-powered OCR pipeline using <span class="tl-highlight">TrOCR and PyTorch</span> to digitize 18th-century manuscripts , 60% reduction in manual correction effort</li>
+          <li>Designed AI-powered OCR pipeline using <span class="tl-highlight">TrOCR and PyTorch</span> to digitize 18th-century manuscripts — 60% reduction in manual correction effort</li>
           <li>Re-architected a digital humanities platform with <span class="tl-highlight">interactive GIS maps, 3D visualizations</span>, and dynamic cross-referencing</li>
         </ul>
       </div>
@@ -1071,8 +1124,8 @@ footer {
         <div class="tl-company">The Commons XR · San Diego, CA (Remote)</div>
         <ul class="tl-points">
           <li>Automated cloud-native CI/CD pipelines using <span class="tl-highlight">GCP Cloud Build, Workflows, and Terraform IaC</span></li>
-          <li>Built RESTful Python APIs powering real-time analytics dashboards , <span class="tl-highlight">35% latency reduction</span></li>
-          <li>Architected secure multi-service GCP environment with IAM least-privilege policies , <span class="tl-highlight">zero critical findings</span> in security audit</li>
+          <li>Built RESTful Python APIs powering real-time analytics dashboards — <span class="tl-highlight">35% latency reduction</span></li>
+          <li>Architected secure multi-service GCP environment with IAM least-privilege policies — <span class="tl-highlight">zero critical findings</span> in security audit</li>
         </ul>
       </div>
 
@@ -1165,7 +1218,7 @@ footer {
   <div class="section-label">About</div>
   <div class="about-split">
 
-    <!-- Trajectory visual , no photo needed -->
+    <!-- Trajectory visual — no photo needed -->
     <div class="about-visual" style="background: var(--ink); border: none; flex-direction: column; align-items: flex-start; justify-content: space-between; padding: 40px; gap: 0;">
       <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: rgba(245,242,235,0.35); text-transform: uppercase; margin-bottom: 40px;">Career trajectory</div>
 
@@ -1198,9 +1251,10 @@ footer {
       </div>
 
       <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 6px;">
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">AWS Solutions Architect</div>
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">Azure AZ-900</div>
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">M.Eng Cloud Engineering · UMD 2026</div>
+        <div style="font-family: var(--mono); font-size: 10px; color: rgba(245,242,235,0.3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px;">Certifications &amp; education</div>
+        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">AWS Certified Solutions Architect</div>
+        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">Azure AZ-900 Certified</div>
+        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">M.Eng Cloud Engineering · UMD, expected 2026</div>
       </div>
     </div>
 
@@ -1208,13 +1262,13 @@ footer {
       <h2 class="section-heading" style="font-size: clamp(32px,3.5vw,52px); margin-bottom: 32px;">I started with pixels.<br><em>Now I think in systems.</em></h2>
 
       <p>
-        Frontend development taught me to obsess over the experience , every millisecond, every interaction, every edge case a real user would hit. But I kept running into the same ceiling: <strong>great interfaces on fragile infrastructure.</strong> So I went deeper. Cloud architecture, distributed systems, Kubernetes, infrastructure as code. My foundation in electronics and telecommunications gave me an early instinct for systems thinking: how things connect, fail, and recover. I wanted to own the full stack of what I build , and understand what makes it break at scale.
+        Frontend development taught me to obsess over the experience — every millisecond, every interaction, every edge case a real user would hit. But I kept running into the same ceiling: <strong>great interfaces on fragile infrastructure.</strong> So I went deeper. Cloud architecture, distributed systems, Kubernetes, infrastructure as code. My foundation in electronics and telecommunications gave me an early instinct for systems thinking: how things connect, fail, and recover. I wanted to own the full stack of what I build — and understand what makes it break at scale.
       </p>
       <p>
         Now I am pushing into <strong>Applied AI</strong>. Not because it is trendy, but because it is the most interesting engineering problem I have encountered: making systems that reason, that learn, that automate the repetitive so humans can focus on what matters. If something can be automated, I am already thinking about how.
       </p>
       <p>
-        What drives me is building things that <strong>grow, scale, and hold up under pressure</strong>. I think about the future of a product before I write the first line. I am not afraid of new territory , the AI space moves fast, and I move with it.
+        What drives me is building things that <strong>grow, scale, and hold up under pressure</strong>. I think about the future of a product before I write the first line. I am not afraid of new territory — the AI space moves fast, and I move with it.
       </p>
       <div class="about-fact-row">
         <div class="about-fact">
@@ -1240,7 +1294,7 @@ footer {
   <div class="contact-inner">
     <div>
       <h2 class="contact-heading">Let's build<br>something<br><em>good.</em></h2>
-      <p class="contact-sub">Open to full-time roles in full-stack engineering, cloud infrastructure, or AI/ML , particularly companies where those three overlap.</p>
+      <p class="contact-sub">Open to full-time roles in full-stack engineering, cloud infrastructure, or AI/ML — particularly companies where those three overlap.</p>
     </div>
     <div class="contact-links-dark">
       <a href="mailto:divyakamila7@gmail.com" class="cl-item">
@@ -1268,7 +1322,7 @@ footer {
 </div>
 
 <footer>
-  <span class="footer-copy">Divya Kamila , 2026</span>
+  <span class="footer-copy">Divya Kamila — 2025</span>
   <span class="footer-tag">College Park, MD</span>
 </footer>
 
@@ -1282,6 +1336,24 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.fade-up, .timeline-item').forEach(el => observer.observe(el));
+
+// Mobile nav toggle
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  navToggle.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+});
 
 // Stagger hero stats on load
 document.querySelectorAll('.hero-stat.fade-up').forEach((el, i) => {
