@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Divya Kamila</title>
+<title>Divya Kamila — Software Engineer, Cloud</title>
+<meta name="description" content="Divya Kamila — Software Engineer specializing in cloud infrastructure and full-stack systems, with hands-on AI/ML engineering experience. AWS &amp; Terraform certified.">
+<meta property="og:title" content="Divya Kamila — Software Engineer, Cloud">
+<meta property="og:description" content="Software Engineer specializing in cloud infrastructure and full-stack systems, with hands-on AI/ML engineering experience. AWS &amp; Terraform certified.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0d0d'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-style='italic' fill='%23f5f2eb' text-anchor='middle'%3EDK%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -315,6 +320,226 @@ section {
   margin: 0 auto;
 }
 
+.page-section {
+  max-width: 100%;
+  padding: 120px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-inner.section-inner--spaced {
+  margin: 80px auto 0;
+}
+
+.section-grid {
+  display: grid;
+  gap: 80px;
+}
+
+.section-grid--two {
+  grid-template-columns: 1fr 2fr;
+}
+
+.section-grid--equal {
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.project-card {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.project-card:hover {
+  text-decoration: none;
+}
+
+.project-tile--full {
+  grid-column: 1 / -1;
+}
+
+.trajectory-step-strong.trajectory-step-strong--muted {
+  color: rgba(245,242,235,0.6);
+}
+
+.trajectory-step-strong.trajectory-step-strong--accent {
+  font-style: italic;
+  color: var(--blue-mid);
+}
+
+.section-heading.section-heading--spaced {
+  margin-bottom: 32px;
+}
+
+.credential-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.credential-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 150px;
+  min-height: 270px;
+  border: 1px solid var(--line);
+  padding: 20px;
+  text-decoration: none;
+  transition: background 0.2s;
+  color: inherit;
+  background: var(--paper);
+}
+
+.credential-card:hover {
+  background: rgba(245,242,235,0.6);
+}
+
+.credential-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.credential-heading {
+  margin-bottom: 40px;
+}
+
+.credential-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.15;
+  color: var(--ink);
+}
+
+.credential-link {
+  font-size: 13px;
+  color: var(--blue);
+}
+
+.section-heading.section-heading--compact {
+  font-size: clamp(32px, 3.5vw, 52px);
+  margin-bottom: 20px;
+}
+
+.section-copy {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.about-section {
+  background: var(--cream);
+}
+
+.about-visual.about-visual--dark {
+  background: var(--ink);
+  border: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 0;
+}
+
+.trajectory-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.trajectory-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.trajectory-step:last-child {
+  border-bottom: none;
+}
+
+.trajectory-step-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(245,242,235,0.3);
+  flex-shrink: 0;
+}
+
+.trajectory-step--now .trajectory-step-bullet {
+  background: rgba(245,242,235,0.55);
+}
+
+.trajectory-step--next .trajectory-step-bullet {
+  background: var(--blue-mid);
+  box-shadow: 0 0 12px rgba(74,118,212,0.6);
+}
+
+.trajectory-step-strong {
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--paper);
+  letter-spacing: -0.3px;
+}
+
+.trajectory-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(245,242,235,0.35);
+  margin-bottom: 3px;
+}
+
+.trajectory-label--heading {
+  font-size: 11px;
+  margin-bottom: 40px;
+}
+
+.trajectory-step--next .trajectory-label {
+  color: rgba(74,118,212,0.8);
+}
+
+.trajectory-note {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trajectory-note-item {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 7px 12px;
+  background: rgba(245,242,235,0.07);
+  color: rgba(245,242,235,0.5);
+  letter-spacing: 0.06em;
+}
+
 .section-label {
   font-family: var(--mono);
   font-size: 11px;
@@ -474,6 +699,11 @@ section {
 }
 
 .project-tile:hover .pt-arrow { color: var(--paper); }
+
+.project-tile { cursor: grab; }
+.project-tile:active { cursor: grabbing; }
+.project-tile.dragging { opacity: 0.35; }
+.project-tile.drag-over { outline: 2px dashed var(--blue); outline-offset: -2px; }
 
 /* ─── EXPERIENCE TIMELINE ─── */
 .timeline {
@@ -876,7 +1106,7 @@ footer {
     transition: max-height 0.3s ease;
   }
 
-  .nav-links.open { max-height: 320px; }
+  .nav-links.open { max-height: 380px; }
 
   .nav-links li { border-top: 1px solid var(--line); }
 
@@ -911,6 +1141,7 @@ footer {
     <li><a href="#work">Work</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#about">About</a></li>
   </ul>
   <a href="mailto:divyakamila7@gmail.com" class="nav-cta">Get in touch</a>
@@ -924,15 +1155,16 @@ footer {
 <!-- HERO -->
 <div class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Full Stack Engineer · Cloud · AI/ML</p>
+    <p class="hero-eyebrow">Software Engineer · Cloud</p>
     <h1 class="hero-name">
       Building systems<br>that <em>ship.</em>
     </h1>
     <p class="hero-desc">
-      Three years delivering production software in <strong>fintech and cloud infrastructure</strong>. I work across the full stack — from React interfaces to Kubernetes clusters — with a current focus on <strong>AI-powered tooling</strong>.
+      Three years delivering production software in <strong>fintech and cloud infrastructure</strong>. I work across the full stack — from React interfaces to Kubernetes clusters — and bring that same systems thinking to <strong>AI-powered tooling</strong>.
     </p>
     <div class="hero-links">
       <a href="#work" class="hero-link primary">View work</a>
+      <a href="https://drive.google.com/drive/folders/1iDICBSC_lr7APQacOyELwaoah2p7qpdc?usp=sharing" target="_blank" rel="noopener noreferrer" class="hero-link">Resume</a>
       <a href="#experience" class="hero-link">Experience</a>
       <a href="https://linkedin.com/in/divya-kamila" target="_blank" class="hero-link">LinkedIn</a>
       <a href="https://github.com/divya0702" target="_blank" class="hero-link">GitHub</a>
@@ -1017,18 +1249,18 @@ footer {
 </div>
 
 <!-- WORK / PROJECTS -->
-<section id="work" style="max-width: 100%; padding: 120px 0; border-bottom: 1px solid var(--line);">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 48px;">
+<section id="work" class="page-section">
+  <div class="section-inner">
     <div class="section-label">Selected work</div>
     <div class="projects-intro">
       <h2 class="section-heading">Projects that<br><em>solve real</em><br>problems.</h2>
       <p class="projects-desc">A focused selection across AI, fintech, and infrastructure. Each one built with production quality in mind — not just to demonstrate a skill, but to actually work.</p>
     </div>
   </div>
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 48px;">
-    <div class="projects-grid" style="grid-template-columns: 1fr 1fr;">
+  <div class="section-inner">
+    <div class="projects-grid" data-num-start="1">
 
-      <a href="https://devpost.com/software/green-sense" target="_blank" rel="noopener noreferrer" class="project-tile" style="text-decoration: none; display: block;">
+      <a href="https://devpost.com/software/green-sense" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
         <div class="pt-num">01</div>
         <div class="pt-title">Green Sense</div>
         <div class="pt-tech">Gemini API · RAG · React · Python</div>
@@ -1041,7 +1273,7 @@ footer {
         <span class="pt-arrow">&#8599;</span>
       </a>
 
-      <a href="https://github.com/divya0702/eks-microservices" target="_blank" rel="noopener noreferrer" class="project-tile" style="text-decoration: none; display: block;">
+      <a href="https://github.com/divya0702/eks-microservices" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
         <div class="pt-num">02</div>
         <div class="pt-title">BookMyEvent</div>
         <div class="pt-tech">AWS EKS · Go · React · Kubernetes · Terraform</div>
@@ -1054,21 +1286,34 @@ footer {
         <span class="pt-arrow">&#8599;</span>
       </a>
 
-      <a href="https://github.com/divya0702/phishing-email-detection" target="_blank" rel="noopener noreferrer" class="project-tile" style="text-decoration: none; display: block;">
+      <a href="https://gamma.app/docs/Enterprise-Omnicloud-AI-Cost-Policy-Control-Plane-z5ieqy5wm4af914" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
         <div class="pt-num">03</div>
-        <div class="pt-title">Phishing Detection</div>
-        <div class="pt-tech">charCNN · BERT · PyTorch · NLP</div>
-        <div class="pt-desc">Trained multiple deep learning architectures on 145,000+ emails. The winning model fuses character-level CNNs with contextual BERT embeddings — achieving 99.0% accuracy and 0.994 F1-score. A rigorous study in architecture selection under real-world constraints.</div>
+        <div class="pt-title">Enterprise Omnicloud</div>
+        <div class="pt-tech">AI Gateway · Policy Engine · FinOps</div>
+        <div class="pt-desc">A private AI cost and policy control plane — an inline gateway that governs every model request according to data sensitivity, reliability, and budget, and turns verified savings opportunities into safe, reviewable changes.</div>
         <div class="pt-tags">
-          <span class="pt-tag">Deep learning</span>
-          <span class="pt-tag">Security</span>
-          <span class="pt-tag">99% accuracy</span>
+          <span class="pt-tag">AI Infrastructure</span>
+          <span class="pt-tag">FinOps</span>
+          <span class="pt-tag">Governance</span>
         </div>
         <span class="pt-arrow">&#8599;</span>
       </a>
 
-      <a href="https://github.com/divya0702/Terp-EventSphere" target="_blank" rel="noopener noreferrer" class="project-tile" style="text-decoration: none; display: block;">
+      <a href="https://github.com/divya0702/accessibility-copilot" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
         <div class="pt-num">04</div>
+        <div class="pt-title">Accessibility Copilot</div>
+        <div class="pt-tech">Slack Bolt (Python) · Groq · Gemini · MCP</div>
+        <div class="pt-desc">A Slack agent that makes a workspace more usable for people with visual, cognitive, and screen-reader accessibility needs — intervening at the moment content is created, not after the fact. Uses Groq for conversational replies and Gemini for vision/document tasks, with an MCP server exposing LLM-backed tools and Slack's Real-Time Search API enriching rewrites with workspace context.</div>
+        <div class="pt-tags">
+          <span class="pt-tag">Accessibility</span>
+          <span class="pt-tag">LLM Agents</span>
+          <span class="pt-tag">MCP</span>
+        </div>
+        <span class="pt-arrow">&#8599;</span>
+      </a>
+
+      <a href="https://github.com/divya0702/Terp-EventSphere" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
+        <div class="pt-num">05</div>
         <div class="pt-title">Terp EventSphere</div>
         <div class="pt-tech">React · Node.js · PostgreSQL · NeonDB</div>
         <div class="pt-desc">A microservices-based campus event platform with modular services for user management, event discovery, registration workflows, and waitlist handling — all connected to a cloud PostgreSQL database and deployed live.</div>
@@ -1080,19 +1325,19 @@ footer {
         <span class="pt-arrow">&#8599;</span>
       </a>
 
-      <div class="project-tile" style="grid-column: 1 / -1;">
-        <div class="pt-num">05</div>
-        <div class="pt-title">OCR Manuscript Pipeline</div>
-        <div class="pt-tech">TrOCR · PyTorch · GIS · 3D Visualization · UMD Research</div>
-        <div class="pt-desc">An AI-powered pipeline to digitize 18th-century manuscripts using TrOCR and PyTorch — reducing manual correction effort by 60%. Part of a broader digital humanities platform re-architected with interactive GIS maps, 3D visualizations, and dynamic cross-referencing. Proof that the right engineering can open up entire fields of scholarship.</div>
+      <a href="https://github.com/divya0702/phishing-email-detection" target="_blank" rel="noopener noreferrer" class="project-tile project-card">
+        <div class="pt-num">06</div>
+        <div class="pt-title">Phishing Detection</div>
+        <div class="pt-tech">charCNN · BERT · PyTorch · NLP</div>
+        <div class="pt-desc">Trained multiple deep learning architectures on 145,000+ emails. The winning model fuses character-level CNNs with contextual BERT embeddings — achieving 99.0% accuracy and 0.994 F1-score. A rigorous study in architecture selection under real-world constraints.</div>
         <div class="pt-tags">
-          <span class="pt-tag">Research</span>
-          <span class="pt-tag">Computer vision</span>
-          <span class="pt-tag">UMD</span>
-          <span class="pt-tag">60% effort reduction</span>
+          <span class="pt-tag">Deep learning</span>
+          <span class="pt-tag">Security</span>
+          <span class="pt-tag">99% accuracy</span>
         </div>
-        <!-- <span class="pt-arrow">&#8599;</span> -->
-      </div>
+        <span class="pt-arrow">&#8599;</span>
+      </a>
+
 
     </div>
   </div>
@@ -1101,15 +1346,15 @@ footer {
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-label">Where I've worked</div>
-  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 80px;">
+  <div class="section-grid section-grid--two">
     <div>
-      <h2 class="section-heading" style="font-size: clamp(32px,3.5vw,52px);">Three years,<br><em>shipped.</em></h2>
-      <p style="font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.8; margin-top: 20px;">From fintech platforms at scale to cloud-native infrastructure at a startup. Each role added something irreplaceable.</p>
+      <h2 class="section-heading section-heading--compact">Three years,<br><em>shipped.</em></h2>
+      <p class="section-copy">From fintech platforms at scale to cloud-native infrastructure at a startup. Each role added something irreplaceable.</p>
     </div>
     <div class="timeline">
 
       <div class="timeline-item">
-        <div class="tl-period">Sep 2024 - Present</div>
+        <div class="tl-period">Sep 2024 - May 2026</div>
         <div class="tl-role">Graduate Research Assistant</div>
         <div class="tl-company">University of Maryland, College Park</div>
         <ul class="tl-points">
@@ -1120,7 +1365,7 @@ footer {
 
       <div class="timeline-item">
         <div class="tl-period">May 2025 - Aug 2025</div>
-        <div class="tl-role">Full Stack + DevOps Intern</div>
+        <div class="tl-role">Full Stack + Cloud Intern</div>
         <div class="tl-company">The Commons XR · San Diego, CA (Remote)</div>
         <ul class="tl-points">
           <li>Automated cloud-native CI/CD pipelines using <span class="tl-highlight">GCP Cloud Build, Workflows, and Terraform IaC</span></li>
@@ -1151,8 +1396,8 @@ footer {
   <div class="section-label">Technical skills</div>
   <div class="skills-layout">
     <div class="skills-sidebar">
-      <h2 class="section-heading" style="font-size: clamp(32px,3.5vw,52px);">Full stack,<br><em>cloud-native.</em></h2>
-      <p style="font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.8; margin-top: 24px;">Strong generalist with depth in React, Python, and AWS. Currently deepening expertise in agentic AI and LLM-powered systems.</p>
+      <h2 class="section-heading section-heading--compact">Full stack,<br><em>cloud-native.</em></h2>
+      <p class="section-copy">Strong generalist with depth in React, Python, and AWS. Currently deepening expertise in agentic AI and LLM-powered systems.</p>
     </div>
     <div class="skills-body">
       <div class="skill-group">
@@ -1204,8 +1449,12 @@ footer {
           <span class="sg-pill featured">PyTorch</span>
           <span class="sg-pill featured">RAG Pipelines</span>
           <span class="sg-pill featured">LLMs API</span>
+          <span class="sg-pill featured">Gemini API</span>
+          <span class="sg-pill">Groq</span>
+          <span class="sg-pill">LangChain</span>
+          <span class="sg-pill featured">MCP</span>
           <span class="sg-pill">pgvector</span>
-          <span class="sg-pill featured">Ollama</span>
+          <span class="sg-pill">Ollama</span>
           <span class="sg-pill">Hugging Face</span>
         </div>
       </div>
@@ -1213,55 +1462,77 @@ footer {
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-label">Verified credentials</div>
+  <h2 class="section-heading section-heading--compact section-heading--spaced">Certified,<br><em>not just claimed.</em></h2>
+  <div class="credential-grid">
+    <a href="https://www.credly.com/badges/226c2374-e4a5-4182-80a5-d229d9180d02/public_url" target="_blank" rel="noopener noreferrer" class="credential-card">
+      <span class="credential-label">Credly</span>
+      <span class="credential-title">AWS Certified Solutions Architect – Associate</span>
+      <span class="credential-link">View credential &#8599;</span>
+    </a>
+    <a href="https://www.credly.com/badges/5058f742-900e-43c0-83be-08177bfa4043/public_url" target="_blank" rel="noopener noreferrer" class="credential-card">
+      <span class="credential-label">Credly</span>
+      <span class="credential-title">HashiCorp Certified: Terraform Associate</span>
+      <span class="credential-link">View credential &#8599;</span>
+    </a>
+    <a href="https://learn.microsoft.com/en-in/users/divyakamila-3162/credentials/5f578f183c5a60f6?ref=https%3A%2F%2Fwww.linkedin.com%2F" target="_blank" rel="noopener noreferrer" class="credential-card">
+      <span class="credential-label">Microsoft Learn</span>
+      <span class="credential-title">Azure AZ-900 Certified</span>
+      <span class="credential-link">View credential &#8599;</span>
+    </a>
+  </div>
+</section>
+
 <!-- ABOUT -->
-<section id="about" style="background: var(--cream);">
+<section id="about" class="about-section">
   <div class="section-label">About</div>
   <div class="about-split">
 
     <!-- Trajectory visual — no photo needed -->
-    <div class="about-visual" style="background: var(--ink); border: none; flex-direction: column; align-items: flex-start; justify-content: space-between; padding: 40px; gap: 0;">
-      <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: rgba(245,242,235,0.35); text-transform: uppercase; margin-bottom: 40px;">Career trajectory</div>
+    <div class="about-visual about-visual--dark">
+      <div class="trajectory-label trajectory-label--heading">Career trajectory</div>
 
-      <div style="display: flex; flex-direction: column; gap: 0; width: 100%; flex: 1; justify-content: center;">
-
-        <div style="display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(245,242,235,0.3); flex-shrink: 0;"></div>
+      <div class="trajectory-panel">
+        <div class="trajectory-step trajectory-step--origin">
+          <div class="trajectory-step-bullet"></div>
           <div>
-            <div style="font-family: var(--mono); font-size: 10px; color: rgba(245,242,235,0.3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px;">Origin</div>
-            <div style="font-family: var(--serif); font-size: 18px; color: rgba(245,242,235,0.6); letter-spacing: -0.3px;">Frontend Developer</div>
+            <div class="trajectory-label">Origin</div>
+            <div class="trajectory-step-strong trajectory-step-strong--muted">Frontend Developer</div>
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <div style="width: 8px; height: 8px; border-radius: 50%; background: rgba(245,242,235,0.55); flex-shrink: 0;"></div>
+        <div class="trajectory-step trajectory-step--now">
+          <div class="trajectory-step-bullet"></div>
           <div>
-            <div style="font-family: var(--mono); font-size: 10px; color: rgba(245,242,235,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px;">Now</div>
-            <div style="font-family: var(--serif); font-size: 18px; color: var(--paper); letter-spacing: -0.3px;">Cloud Engineer</div>
+            <div class="trajectory-label">Now</div>
+            <div class="trajectory-step-strong">Cloud Engineer</div>
           </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08);">
-          <div style="width: 8px; height: 8px; border-radius: 50%; background: var(--blue-mid); flex-shrink: 0; box-shadow: 0 0 12px rgba(74,118,212,0.6);"></div>
+        <div class="trajectory-step trajectory-step--next">
+          <div class="trajectory-step-bullet"></div>
           <div>
-            <div style="font-family: var(--mono); font-size: 10px; color: rgba(74,118,212,0.8); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px;">Next</div>
-            <div style="font-family: var(--serif); font-size: 18px; font-style: italic; color: var(--blue-mid); letter-spacing: -0.3px;">Applied AI Engineer</div>
+            <div class="trajectory-label">Next</div>
+            <div class="trajectory-step-strong trajectory-step-strong--accent">Software Engineer, Cloud</div>
           </div>
         </div>
-
       </div>
 
-      <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 6px;">
-        <div style="font-family: var(--mono); font-size: 10px; color: rgba(245,242,235,0.3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 3px;">Certifications &amp; education</div>
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">AWS Certified Solutions Architect</div>
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">Azure AZ-900 Certified</div>
-        <div style="font-family: var(--mono); font-size: 11px; padding: 7px 12px; background: rgba(245,242,235,0.07); color: rgba(245,242,235,0.5); letter-spacing: 0.06em;">M.Eng Cloud Engineering · UMD, expected 2026</div>
+      <div class="trajectory-note">
+        <div class="trajectory-label">Certifications &amp; education</div>
+        <div class="trajectory-note-item">AWS Certified Solutions Architect</div>
+        <div class="trajectory-note-item">HashiCorp Certified: Terraform Associate</div>
+        <div class="trajectory-note-item">Azure AZ-900 Certified</div>
+        <div class="trajectory-note-item">M.Eng Cloud Engineering · UMD, 2026</div>
       </div>
     </div>
 
     <div class="about-content">
-      <h2 class="section-heading" style="font-size: clamp(32px,3.5vw,52px); margin-bottom: 32px;">I started with pixels.<br><em>Now I think in systems.</em></h2>
+      <h2 class="section-heading section-heading--compact section-heading--spaced">I started with pixels.<br><em>Now I think in systems.</em></h2>
 
-      <p>
+      <p class="section-copy">
         Frontend development taught me to obsess over the experience — every millisecond, every interaction, every edge case a real user would hit. But I kept running into the same ceiling: <strong>great interfaces on fragile infrastructure.</strong> So I went deeper. Cloud architecture, distributed systems, Kubernetes, infrastructure as code. My foundation in electronics and telecommunications gave me an early instinct for systems thinking: how things connect, fail, and recover. I wanted to own the full stack of what I build — and understand what makes it break at scale.
       </p>
       <p>
@@ -1279,10 +1550,6 @@ footer {
           <div class="af-val">3</div>
           <div class="af-label">Technical disciplines</div>
         </div>
-        <div class="about-fact">
-          <div class="af-val">0</div>
-          <div class="af-label">Technologies I've refused to learn</div>
-        </div>
       </div>
     </div>
 
@@ -1294,9 +1561,14 @@ footer {
   <div class="contact-inner">
     <div>
       <h2 class="contact-heading">Let's build<br>something<br><em>good.</em></h2>
-      <p class="contact-sub">Open to full-time roles in full-stack engineering, cloud infrastructure, or AI/ML — particularly companies where those three overlap.</p>
+      <p class="contact-sub">Open to full-time Software Engineer and Cloud Infrastructure roles — ideally where AI/ML is part of the stack too.</p>
     </div>
     <div class="contact-links-dark">
+      <a href="https://drive.google.com/drive/folders/1iDICBSC_lr7APQacOyELwaoah2p7qpdc?usp=sharing" target="_blank" rel="noopener noreferrer" class="cl-item">
+        <span class="cl-label">Resume</span>
+        <span class="cl-value">Download PDF</span>
+        <span class="cl-arrow">&#8599;</span>
+      </a>
       <a href="mailto:divyakamila7@gmail.com" class="cl-item">
         <span class="cl-label">Email</span>
         <span class="cl-value">divyakamila7@gmail.com</span>
@@ -1322,8 +1594,8 @@ footer {
 </div>
 
 <footer>
-  <span class="footer-copy">Divya Kamila — 2025</span>
-  <span class="footer-tag">College Park, MD</span>
+  <span class="footer-copy">Divya Kamila — 2026</span>
+  <span class="footer-tag">United States</span>
 </footer>
 
 <script>
@@ -1358,6 +1630,61 @@ navLinks.querySelectorAll('a').forEach(link => {
 // Stagger hero stats on load
 document.querySelectorAll('.hero-stat.fade-up').forEach((el, i) => {
   setTimeout(() => el.classList.add('visible'), 200 + i * 120);
+});
+
+// Drag-to-reorder project tiles (per grid)
+function renumberGrid(grid) {
+  const start = parseInt(grid.dataset.numStart, 10) || 1;
+  grid.querySelectorAll(':scope > .project-tile .pt-num').forEach((num, i) => {
+    num.textContent = String(start + i).padStart(2, '0');
+  });
+}
+
+function swapTiles(a, b) {
+  const aParent = a.parentNode, bParent = b.parentNode;
+  const aNext = a.nextSibling === b ? a : a.nextSibling;
+  const bNext = b.nextSibling === a ? b : b.nextSibling;
+  bParent.insertBefore(a, bNext);
+  aParent.insertBefore(b, aNext);
+}
+
+document.querySelectorAll('.projects-grid').forEach(grid => {
+  grid.querySelectorAll(':scope > .project-tile').forEach(tile => { tile.draggable = true; });
+
+  let dragEl = null;
+  let overEl = null;
+
+  grid.addEventListener('dragstart', (e) => {
+    const tile = e.target.closest('.project-tile');
+    if (!tile) return;
+    dragEl = tile;
+    tile.classList.add('dragging');
+  });
+
+  grid.addEventListener('dragover', (e) => {
+    if (!dragEl) return;
+    e.preventDefault();
+    const tile = e.target.closest('.project-tile');
+    if (!tile || tile === dragEl) return;
+    if (overEl && overEl !== tile) overEl.classList.remove('drag-over');
+    overEl = tile;
+    overEl.classList.add('drag-over');
+  });
+
+  grid.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const tile = e.target.closest('.project-tile');
+    if (!tile || !dragEl || tile === dragEl) return;
+    swapTiles(dragEl, tile);
+    renumberGrid(grid);
+  });
+
+  grid.addEventListener('dragend', () => {
+    if (dragEl) dragEl.classList.remove('dragging');
+    if (overEl) overEl.classList.remove('drag-over');
+    dragEl = null;
+    overEl = null;
+  });
 });
 </script>
 
